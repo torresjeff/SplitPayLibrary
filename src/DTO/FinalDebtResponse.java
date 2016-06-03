@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package negocio;
+package DTO;
 
-import DTO.FinalDebtResponse;
-import javax.ejb.Remote;
+import entities.Usuario;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Sid
  */
-@Remote
-public interface FacadeFinalDebtRemote {
-
-    String Hello();
-
-    FinalDebtResponse FinalDebtResolution(DTO.FinalDebtRequest request);
+public class FinalDebtResponse extends Response {
+    public List<Usuario> usuarios = new ArrayList<>();
+    
     
 }

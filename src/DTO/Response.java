@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package negocio;
+package DTO;
 
-import DTO.FinalDebtResponse;
-import javax.ejb.Remote;
+import java.io.Serializable;
 
 /**
  *
  * @author Sid
  */
-@Remote
-public interface FacadeFinalDebtRemote {
-
-    String Hello();
-
-    FinalDebtResponse FinalDebtResolution(DTO.FinalDebtRequest request);
+public class Response implements Serializable {
+    public String operationError = null;
     
+    public boolean Succeeded() {
+        return operationError == null;
+    }
 }
