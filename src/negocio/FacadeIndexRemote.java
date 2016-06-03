@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DTO;
+package negocio;
 
-import java.io.Serializable;
+import DTO.GetGroupsRequest;
+import DTO.GetGroupsResponse;
+import javax.ejb.Remote;
 
 /**
  *
  * @author Sid
  */
-public class Response {
-    public String operationError = null;
+@Remote
+public interface FacadeIndexRemote {
+
+    GetGroupsResponse GetGroups(GetGroupsRequest request);
     
-    public boolean Succeeded() {
-        return operationError == null;
-    }
 }

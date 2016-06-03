@@ -5,7 +5,7 @@
  */
 package DTO;
 
-import entities.Usuario;
+import entities.Grupo;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,6 @@ import java.util.List;
  *
  * @author Sid
  */
-public class FinalDebtResponse extends Response implements Serializable {
-    public List<Usuario> usuarios = new ArrayList<>();
-    
-    
+public class GetGroupsResponse extends Response implements Serializable{
+    public List<Grupo> grupos = new ArrayList<>();
 }
