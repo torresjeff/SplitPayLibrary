@@ -5,6 +5,8 @@
  */
 package negocio;
 
+import integracion.LoginPayPalResponse;
+import integracion.LoginRequest;
 import javax.ejb.Remote;
 
 /**
@@ -15,5 +17,7 @@ import javax.ejb.Remote;
 public interface FacadeMemberToMemberRemote {
 
     String Hello();
+
+    LoginPayPalResponse LoginPayPal(LoginRequest request);
     
 }
