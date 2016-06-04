@@ -9,6 +9,8 @@ import DTO.GetDebtRequest;
 import DTO.GetDebtResponse;
 import integracion.LoginPayPalResponse;
 import integracion.LoginRequest;
+import integracion.PagarPayPalResponse;
+import integracion.PagarRequest;
 import javax.ejb.Remote;
 
 /**
@@ -23,5 +25,7 @@ public interface FacadeMemberToMemberRemote {
     LoginPayPalResponse LoginPayPal(LoginRequest request);
 
     GetDebtResponse GetDebts(GetDebtRequest request);
+
+    PagarPayPalResponse Pagar(PagarRequest request);
     
 }
