@@ -5,17 +5,22 @@
  */
 package DTO;
 
+import entities.Grupo;
 import entities.Usuario;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author Sid
  */
-public class FinalDebtResponse extends Response implements Serializable {
-    public int totalDebt;
+public class MailMessage implements Serializable {
+    public Usuario usuario;
+    public Grupo grupo;
+
+    public MailMessage(Usuario usuario, Grupo grupo) {
+        this.usuario = usuario;
+        this.grupo = grupo;
+    }
     
     
 }
